@@ -25,7 +25,7 @@ int getUserChoice() {
 
 string Choice1() {
   int operand1;
-  string operation;
+  char operation;
   int operand2;
   string expression;
 
