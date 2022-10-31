@@ -5,15 +5,15 @@
 using namespace std;
 
 int main(int argc, char* argv[]) {
-    string word; // Placeholder for argv element
+    string word;                              // Placeholder for argv element
     for (int i = 1; i < argc; i++) {
-        word = argv[i]; // Saving current argv element to word variable
+        word = argv[i];                       // Saving current argv element to word variable
         if(word.find("/?") != string::npos || 
            word.find("/h") != string::npos || 
            word.find("-?") != string::npos) { // Checking if word contains "/?"", "/h", or "-?"
-            cout << "true" << endl; // Print true if it contains specified string
+            cout << "true" << endl;           // Print true if it contains specified string
         }
-        else cout << "false" << endl; // Print false if it does not contain specified string
+        else cout << "false" << endl;         // Print false if it does not contain specified string
     }
 }
 

@@ -45,25 +45,25 @@ string Choice1() {
   }
   */
 
-  if (operation == "+") {
+  if (operation == '+') {
     return to_string(operand1) + " + " + to_string(operand2) + " = " + to_string(operand1 + operand2);
   }
 
-  else if (operation == "-") {
+  else if (operation == '-') {
     return to_string(operand1) + " - " + to_string(operand2) + " = " + to_string(operand1 - operand2);
   }
 
-  else if (operation == "*") {
+  else if (operation == '*') {
     return to_string(operand1) + " * " + to_string(operand2) + " = " +
            to_string(operand1 * operand2);
   }
 
-  else if (operation == "/") {
+  else if (operation == '/') {
     return to_string(operand1) + " / " + to_string(operand2) + " = " +
            to_string(operand1 / operand2);
   }
 
-  else if (operation == "%") {
+  else if (operation == '%') {
     return to_string(operand1) + " % " + to_string(operand2) + " = " +
            to_string(operand1 % operand2);
   }

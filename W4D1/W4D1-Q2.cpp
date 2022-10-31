@@ -6,15 +6,15 @@ using namespace std;
 
 double* getDynamicPointerToMaxAndMin(int size, double arr[]) {
     double *pNumList = new double[2]; // Create new dynamically allocated memory to store min and max
-    pNumList[0] = arr[0]; // Save first element of arr as min
-    pNumList[1] = arr[0]; // Save first element of arr as max
+    pNumList[0] = arr[0];             // Save first element of arr as min
+    pNumList[1] = arr[0];             // Save first element of arr as max
 
-    for(int i = 1; i < size; i++) { // Loop through remainind elemnts of arr
+    for(int i = 1; i < size; i++) {   // Loop through remainind elemnts of arr
         if(arr[i] < arr[0]) {
-            pNumList[0] = arr[i]; // Save element as min if it is less than current min
+            pNumList[0] = arr[i];     // Save element as min if it is less than current min
         }
         else if(arr[i] > arr[0]) {
-            pNumList[1] = arr[i]; // Save element as max if it is greater than current max
+            pNumList[1] = arr[i];     // Save element as max if it is greater than current max
         }
     }
     return pNumList;
