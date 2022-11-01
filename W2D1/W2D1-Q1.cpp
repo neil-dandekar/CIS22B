@@ -23,9 +23,9 @@ int main() {
     int count;                          // Number of times the smallest element occurred in the array
     bool lastNum;                       // Is the last array element equal to the smallest?
     int smallest = findTheSmallest(array, size, lastNum, count); // Smallest number in the array
-    cout << "The smallest number in the array is " << smallest 
+    cout << "\nThe smallest number in the array is " << smallest 
          << " which was repeated " << count 
-         << " time(s) and was it the last number in the array?: " 
+         << " time(s).\nWas the last number in the array equal to " << smallest << "?: " 
          << boolalpha << lastNum;       // Print result
     return 0;
 }
