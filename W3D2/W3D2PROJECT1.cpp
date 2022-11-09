@@ -17,12 +17,13 @@ int getUserChoice() {
     cout << "\nEnter Option: ";
     cin >> userChoice;
 
-    if(!cin.fail()) {
-      cout << "Please try again. Only numbers 1, 2, 3, or 4 are valid." << endl;
-      cin.clear();
-      cin.ignore(INT_MAX, '\n');
-      return userChoice;
-    }
+    // if(cin.fail()) {
+    //   cout << "Please try again. Only numbers 1, 2, 3, or 4 are valid." << endl;
+    //   cin.clear();
+    //   cin.ignore(INT_MAX, '\n');
+    //   return userChoice;
+    // }
+    return userChoice;
   }  
 }
 
@@ -37,11 +38,6 @@ string Choice1() {
   stringstream sin(expression);
   sin >> operand1 >> operator1 >> operand2;
   cout << "Operator:  " << operator1 << endl;
-
-  // if(sin.fail()) {
-  //   cout << "Please try again. Only numerical operands and operators (+, -, *, /, or %) are valid." << endl;
-  //   return Choice1();
-  // }
 
   stringstream out;
   switch (operator1) {
