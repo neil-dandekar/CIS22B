@@ -1,3 +1,1 @@
-for(int i = 0; i < arraySize; i++) {
-		days[arr[i]->getNumDay()-1]++;
-	}
+cd "/Users/neildandekar/Documents/VSCode\Projects/CIS22B/W5D1/" && g++ W5D1-Q1-Q2-Q3.cpp -o W5D1-Q1-Q2-Q3 && "/Users/neildandekar/Documents/VSCode\Projects/CIS22B/W5D1/"W5D1-Q1-Q2-Q3

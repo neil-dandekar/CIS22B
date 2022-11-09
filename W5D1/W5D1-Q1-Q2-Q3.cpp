@@ -74,7 +74,7 @@ class Course {
 };
 
 void analyzeInvalid(Course arr[], int arraySize, int &invDesc, int &invUnits, int &invDays, int &totUnits) {
-	invDesc = invUnits = invDays = totUnits = 0;						// Initialize variables to 0
+	invDesc = invUnits = invDays = totUnits = 0;					// Initialize variables to 0
 	for(int i = 0; i < arraySize; i++) {							// Loop through array
 		if(arr[i].invDesc()) invDesc++;								// Increment invDesc if current description is invalid
 		if(arr[i].invUnits()) {										// Increment invUnits if current units are invalid and
@@ -89,8 +89,7 @@ void hasConflicting(Course *arr, int arraySize, int &confDays, int &maxConflict)
 	int days[] = {0, 0, 0, 0, 0, 0, 0};
 	confDays = 0;
 	for(int i = 0; i < arraySize; i++) {
-		cout << (*(arr+i)).getNumDay() << endl;
-		days[(*(arr+i)).getNumDay()-1]++;
+		days[(*(arr+i)).getNumDay()]++;
 	}
 	int max = days[0];
 	for(int i = 1; i < 7; i++) {
@@ -100,11 +99,20 @@ void hasConflicting(Course *arr, int arraySize, int &confDays, int &maxConflict)
 	maxConflict = max;
 }
 
-int main() {
+void checkEndingWithComma(int argc, char *args[]) {
+	for(int i = 0; i < argc; i++) {
+		for(int j = 0; j != '\0'; j++) {
+			cout << i << ": " << args[i] << ": " << *(args[i] + j) << endl;
+		}
+	}
+}
+
+int main(int argc, char *args[]) {
+	// QUESTION 1:
 	Course course1("Introduction to C++", 3, 4);
 	Course course2("    ", -1, 0);
 	Course course3("", 1, 4);
-	cout << "QUESTION 1: " << endl;
+	cout << "QUESTION 1:" << endl;
  	cout << "Course 1: " << course1.toString() << endl;
 	cout << "Course 2: " << course2.toString() << endl;
 	cout << "Course 3: " << course3.toString() << endl;
@@ -115,6 +123,7 @@ int main() {
 	cout << "Course 1 and Course 3 hasTheSameDay(): " << boolalpha << course1.hasTheSameDay(course3) << endl;
 	cout << endl;
 
+	// QUESTION 2:
 	Course arr[] = {course1, course2, course3};
 	int invDesc, invUnits, invDays, totUnits;
 	analyzeInvalid(arr, 3, invDesc, invUnits, invDays, totUnits);
@@ -127,14 +136,25 @@ int main() {
 	cout << "Total number of invalid units: " << totUnits << endl;
 	cout << endl;
 
+	// QUESTION 3:
 	Course *arr2 = arr;
 	int confDays, maxConflict;
 	hasConflicting(arr2, 3, confDays, maxConflict);
-	cout << "QUESTION 3: " << endl;
+	cout << "QUESTION 3:" << endl;
 	cout << "Course arr[] = {course1, course2, course3}" << endl;
 	cout << "hasConflicting(arr[], 3, confCourses, maxConflict)" << endl;
 	cout << "Number of days with conflicts: " <<  confDays << endl;
-	cout << "Day with the most conflict " << maxConflict << endl;
+	cout << "Day with the most conflict: " << maxConflict << endl;
+	cout << endl;
+
+	// QUESTION 4:
+	argc = 4;
+	args[0] = "bruh";
+	args[1] = "bru";
+	args[2] = "br";
+	args[3] = "b";
+	cout << "QUESTION 4:" << endl;
+	checkEndingWithComma(argc, args);
 
     return 0;
 }
