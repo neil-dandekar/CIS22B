@@ -50,6 +50,7 @@ int main() {
                                    {10, 20, 50, 60, 80  },
                                    {100, 100, 40, 40, 40}     };
 
+    // OUTPUT:
     cout << "  |  studentScoreList  |  " << "Student-Pass-Count" << "  |  " << "Student-Perfect-Score-Count  |" << endl;
     cout << "  |          1         |           " << getScoreInfo(studentScoreList1, 1, numPerfect) << "          |                " << numPerfect << "              |" << endl;
     cout << "  |          2         |           " << getScoreInfo(studentScoreList2, 1, numPerfect) << "          |                " << numPerfect << "              |" << endl;

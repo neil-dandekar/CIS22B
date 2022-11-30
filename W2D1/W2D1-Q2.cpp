@@ -19,10 +19,13 @@ int changeAllDigitsToTheGivenChar(char arr[], char ch, int &count) {
 }
 
 int main() {
+    // TEST DATA:
     char array[] = {'H', '1', '0', '2', 'o', '\0'}; // PLEASE CHANGE [Array to be tested]
     char ch = '?';                                  // PLEASE CHANGE [Replacement character]
     int count = 0;                                  // Number of array elements identical to ch
     int replaced = changeAllDigitsToTheGivenChar(array, ch, count);
+
+    // OUTPUT:
     cout << replaced << " character(s) were replaced and \'" << ch << "\' occurred in the array " << count << " time(s)." << endl;
     return 0;
 }

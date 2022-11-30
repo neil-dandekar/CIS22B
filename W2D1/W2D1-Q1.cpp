@@ -18,11 +18,14 @@ int findTheSmallest(int arr[], int size, bool &lastNum, int &count) {
 }
 
 int main() {
+    // TEST DATA:
     int array[] = {50, 20, 30, 40, 10}; // PLEASE CHANGE [Array to be tested]
     int size = 5;                       // PLEASE CHANGE [Size of array to be tested]
     int count;                          // Number of times the smallest element occurred in the array
     bool lastNum;                       // Is the last array element equal to the smallest?
     int smallest = findTheSmallest(array, size, lastNum, count); // Smallest number in the array
+
+    // OUTPUT:
     cout << "\nThe smallest number in the array is " << smallest 
          << " which was repeated " << count 
          << " time(s).\nWas the last number in the array equal to " << smallest << "?: " 

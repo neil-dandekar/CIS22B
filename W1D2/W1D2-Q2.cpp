@@ -18,12 +18,14 @@ bool repeatPasscode(int password, int &count) {
 }
 
 int main() {
+    // TEST DATA:
     int correctPassword;
     int count;
     cout << "Set your password: ";        // Ask user for their password
     cin >> correctPassword;
     bool success = repeatPasscode(correctPassword, count); // Call function
 
+    // OUTPUT:
     cout << "\nYou attempted the password " << count 
          << " time(s) and were you correct?: " << boolalpha << success; // Print result
 

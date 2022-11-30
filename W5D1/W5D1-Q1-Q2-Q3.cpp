@@ -1,3 +1,4 @@
+// QUESTION 1, 2, & 3:
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -15,7 +16,6 @@ class Course {
 		Course(string courseDesc, int units, int numDay) :			// Constructor method
 			courseDesc(courseDesc), units(units), numDay(numDay) {
 		}
-
 
 		string getCourseDesc() 										// Getter method for Course Description
 		{return courseDesc;}

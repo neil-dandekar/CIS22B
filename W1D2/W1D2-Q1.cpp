@@ -23,8 +23,11 @@ int countTheFirstNumber(int &firstNum) {
 }
 
 int main() {
+  // TEST DATA:
   int num;
   int count = countTheFirstNumber(num);
+
+  // OUTPUT:
   cout << "\nThe first number, " << num << " was entered " << count << " time(s)." << endl; // Print result
   return 0;
 }
