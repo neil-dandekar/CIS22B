@@ -29,5 +29,5 @@ class User {
 
 // QUESTION 1:
 class BadValueException : public exception {
-    
+      
 };
