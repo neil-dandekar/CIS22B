@@ -1,3 +1,3 @@
-# CIS22B
+# CIS22B: Intermediate Programming Methodologies in C++
 
-Hi! These are my programming exercises for CIS 22B: Intermediate Programming Methodologies in C++ at De Anza Community College.
+This is my work for CIS 22B at De Anza College.
